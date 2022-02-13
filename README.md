@@ -1,4 +1,4 @@
-# notas-admin
+# notas-aluno
 
 Essa aplicação se refere a uma API REST feita em node.js para simular um microservice de consulta de notas de alunos.
 
