@@ -1,0 +1,91 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Notas Aluno",
+    "description": "API usada para que alunos acompanhem suas notas."
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/get/{idAluno}": {
+      "get": {
+        "tags": [
+          "Get"
+        ],
+        "description": "Endpoint para obter as notas de um aluno.",
+        "parameters": [
+          {
+            "name": "idAluno",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "schema": {
+              "$ref": "#/definitions/Get"
+            },
+            "description": "OK"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Get": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "idNotas": {
+            "type": "string",
+            "example": "3"
+          },
+          "idAluno": {
+            "type": "string",
+            "example": "5"
+          },
+          "nome": {
+            "type": "string",
+            "example": "Jhon Doe"
+          },
+          "n1": {
+            "type": "number",
+            "example": 7
+          },
+          "n2": {
+            "type": "number",
+            "example": 4
+          },
+          "n3": {
+            "type": "number",
+            "example": 5
+          },
+          "n4": {
+            "type": "number",
+            "example": 0
+          },
+          "media": {
+            "type": "number",
+            "example": 4
+          },
+          "status": {
+            "type": "string",
+            "example": "recuperação"
+          }
+        }
+      }
+    }
+  }
+}
